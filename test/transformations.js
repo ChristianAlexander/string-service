@@ -119,3 +119,25 @@ describe('Length Transformation', function() {
 		expect(length('')).to.equal(0);
 	});
 });
+
+describe('Leftpad Transformation', function() {
+	const leftpad = transformations.leftpad;
+	it('should be a function', function() {
+		expect(leftpad).to.be.a('function');
+	});
+	it('should return \'word\' when given (\'word\')', function() {
+		expect(leftpad('word')).to.equal('word');
+	});
+	it('should return \'  foo\' when given (\'foo\', 5)', function() {
+		expect(leftpad('foo', 5)).to.equal('  foo');
+	});
+	it('should return \'foobar\' when given (\'foobar\', 6)', function() {
+		expect(leftpad('foobar', 6)).to.equal('foobar');
+	});
+	it('should return \'01\' when given (1, 2, 0)', function() {
+		expect(leftpad(1, 2, 0)).to.equal('01');
+	});
+	it('should return \'-1\' when given (1, 2, \'-\')', function() {
+		expect(leftpad(1, 2, '-')).to.equal('-1');
+	});
+});

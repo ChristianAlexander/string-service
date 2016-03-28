@@ -19,3 +19,4 @@ A service for manipulating strings.
 * `GET /lowercase/:input`: Returns the lowercase version of the given string
 * `GET /reverse/:input`: Returns the reversed version of the given string
 * `GET /length/:input`: Returns the length of the given string
+* `GET /leftpad/:input?len={length}&ch={character}`: Runs leftpad on the given string, and returns the result.

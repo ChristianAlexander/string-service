@@ -204,3 +204,59 @@ describe('Length API Method - GET', function() {
 	    });
 	});
 });
+
+describe('Leftpad API Method - GET', function() {
+	it('should return a 404 when requesting /leftpad GET', function(done) {
+	  chai.request(server)
+	    .get('/leftpad')
+	    .end(function(err, res){
+	      res.should.have.status(404);
+	      done();
+	    });
+	});
+	it('should return \'word\' when requesting /leftpad/word GET', function(done) {
+	  chai.request(server)
+	    .get('/leftpad/word')
+	    .end(function(err, res){
+	      res.should.have.status(200);
+	      res.body.should.equal('word');
+	      done();
+	    });
+	});
+	it('should return \'  foo\' when requesting /leftpad/foo?len=5 GET', function(done) {
+	  chai.request(server)
+	    .get('/leftpad/foo?len=5')
+	    .end(function(err, res){
+	      res.should.have.status(200);
+	      res.body.should.equal('  foo');
+	      done();
+	    });
+	});
+	it('should return \'foobar\' when requesting /leftpad/foobar?len=6 GET', function(done) {
+	  chai.request(server)
+	    .get('/leftpad/foobar?len=6')
+	    .end(function(err, res){
+	      res.should.have.status(200);
+	      res.body.should.equal('foobar');
+	      done();
+	    });
+	});
+	it('should return \'01\' when requesting /leftpad/1?len=2&ch=0 GET', function(done) {
+	  chai.request(server)
+	    .get('/leftpad/1?len=2&ch=0')
+	    .end(function(err, res){
+	      res.should.have.status(200);
+	      res.body.should.equal('01');
+	      done();
+	    });
+	});
+	it('should return \'-1\' when requesting /leftpad/1?len=2&ch=- GET', function(done) {
+	  chai.request(server)
+	    .get('/leftpad/1?len=2&ch=-')
+	    .end(function(err, res){
+	      res.should.have.status(200);
+	      res.body.should.equal('-1');
+	      done();
+	    });
+	});
+});
