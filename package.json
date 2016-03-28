@@ -1,6 +1,6 @@
 {
   "name": "string-service",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A service for manipulating strings.",
   "main": "index.js",
   "scripts": {
