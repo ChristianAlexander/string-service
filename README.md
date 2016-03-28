@@ -13,6 +13,7 @@ A service for manipulating strings.
 
 ##Routes
 
+* `GET /`: Returns version information
 * `GET /echo/:input`: Returns the given string
 * `GET /uppercase/:input`: Returns the uppercase version of the given string
 * `GET /lowercase/:input`: Returns the lowercase version of the given string
