@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ChristianAlexander/string-service.svg?branch=master)](https://travis-ci.org/ChristianAlexander/string-service)
+
 #StringService
 A service for manipulating strings.
 
