@@ -4,12 +4,21 @@
   "description": "A service for manipulating strings.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
     "url": "github.com/christianalexander/string-service"
   },
   "author": "Christian Alexander <calexanderdev@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "restify": "^4.0.4"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "mocha": "^2.4.5"
+  }
 }
