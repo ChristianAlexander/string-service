@@ -2,7 +2,9 @@
 A service for manipulating strings.
 
 ##Installation
-`npm install -g string-service`
+
+* Local command line: `npm install -g string-service`
+* Docker: `docker pull christianalexander/string-service`
 
 ##Running
 
@@ -10,6 +12,7 @@ A service for manipulating strings.
 * On specific port: `PORT=3001 string-service`
 * Tests: `npm test`
 * Local development version: `npm start`
+* Docker: `docker run -d -p 8080:8080 christianalexander/string-service`
 
 ##Routes
 
