@@ -13,6 +13,9 @@
   },
   "author": "Christian Alexander <calexanderdev@gmail.com>",
   "license": "MIT",
+  "bin": {
+    "string-service": "./index"
+  },
   "dependencies": {
     "restify": "^4.0.4"
   },
